@@ -26,3 +26,4 @@ build:
   script:
     - make lint/flake8
     #- isort --check .
+    - pytest
