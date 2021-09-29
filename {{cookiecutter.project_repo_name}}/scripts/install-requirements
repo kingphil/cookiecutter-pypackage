@@ -3,6 +3,7 @@
 # get requirements file from first arg; otherwise use default
 fname=${1:-requirements/dev.txt}
 
+set -e
 python3 -m venv .venv/
 source .venv/bin/activate
 pip3 install --upgrade pip
