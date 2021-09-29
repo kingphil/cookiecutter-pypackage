@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
+# get requirements file from first arg; otherwise use default
+fname=${1:-requirements/dev.txt}
+
 python3 -m venv .venv/
 source .venv/bin/activate
 pip3 install --upgrade pip
-pip3 install -r requirements/dev.txt
+pip3 install -r ${fname}
