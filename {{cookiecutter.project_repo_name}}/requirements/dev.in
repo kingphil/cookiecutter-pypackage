@@ -1,0 +1,16 @@
+pip>=23.0.1,<24.0
+bump2version
+wheel>=0.37.0,<1.0
+watchdog
+flake8
+tox
+coverage
+Sphinx
+twine
+isort
+{% if cookiecutter.command_line_interface|lower == 'click' -%}
+Click>=8.1.3,<9.0{% endif %}
+{% if cookiecutter.use_pytest == 'y' -%}
+pytest>=7.2.2,<8.0{% endif %}
+{% if cookiecutter.use_black == 'y' -%}
+black{% endif -%}
