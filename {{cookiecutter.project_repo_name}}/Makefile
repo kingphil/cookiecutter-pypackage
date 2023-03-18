@@ -1,4 +1,4 @@
-.PHONY: clean clean-build clean-pyc clean-test coverage dist docs help install lint lint/flake8
+.PHONY: clean clean-build clean-pyc clean-test coverage dist docs help install lint lint/flake8 update-dependencies
         {%- if cookiecutter.use_black == 'y' %} lint/black{% endif %}
 .DEFAULT_GOAL := help
 
@@ -47,6 +47,10 @@ clean-test: ## remove test and coverage artifacts
 	rm -f .coverage
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
+
+update-dependencies:
+	pip-compile requirements/ops.in --resolver=backtracking
+	pip-compile requirements/dev.in --resolver=backtracking
 
 lint/flake8: ## check style with flake8
 	flake8 {{ cookiecutter.project_slug }} tests
