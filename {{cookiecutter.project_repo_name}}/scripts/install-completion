@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+_{{cookiecutter.project_slug.upper()}}_COMPLETE=bash_source $(which {{cookiecutter.project_repo_name}}) | sudo tee /etc/bash_completion.d/{{cookiecutter.project_repo_name}}
