@@ -25,5 +25,5 @@ build:
   stage: build
   script:
     - make lint/flake8
-    - isort --check .
+    - make isort-check
     - make test

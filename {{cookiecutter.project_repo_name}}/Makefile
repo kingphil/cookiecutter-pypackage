@@ -58,6 +58,9 @@ lint/black: ## check style with black
 
 lint: lint/flake8{%- if cookiecutter.use_black == 'y' %} lint/black{%- endif %} ## check style
 
+isort-check:
+	isort --check .
+
 test: ## run tests quickly with the default Python
 {%- if cookiecutter.use_pytest == 'y' %}
 	pytest
