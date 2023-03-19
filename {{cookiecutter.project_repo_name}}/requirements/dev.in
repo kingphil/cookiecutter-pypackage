@@ -7,6 +7,7 @@ flake8
 tox
 coverage
 Sphinx
+build
 twine
 isort
 {% if cookiecutter.use_pytest == 'y' -%}
