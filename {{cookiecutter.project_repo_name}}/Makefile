@@ -49,8 +49,8 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 update-dependencies:
-	pip-compile requirements/ops.in --resolver=backtracking
-	pip-compile requirements/dev.in --resolver=backtracking
+	pip-compile requirements/ops.in --resolver=backtracking --upgrade
+	pip-compile requirements/dev.in --resolver=backtracking --upgrade
 
 lint/flake8: ## check style with flake8
 	flake8 {{ cookiecutter.project_slug }} tests
