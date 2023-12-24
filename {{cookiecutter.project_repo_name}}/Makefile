@@ -48,7 +48,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
-update-dependencies:
+update-dependencies: ## update python dependencies
 	pip-compile requirements/ops.in --resolver=backtracking --upgrade
 	pip-compile requirements/dev.in --resolver=backtracking --upgrade
 
