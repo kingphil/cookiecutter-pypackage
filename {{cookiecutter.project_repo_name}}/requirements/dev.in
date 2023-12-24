@@ -1,4 +1,4 @@
--f ops.txt
+-r ops.txt
 pip>=23.0.1,<24.0
 bump2version
 wheel>=0.37.0,<1.0
